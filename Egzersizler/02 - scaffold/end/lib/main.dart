@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,6 @@ class MyApp extends StatelessWidget {
           // Barımızın sol kısmında ayrılmış kısım burada genelde back button veya hamburger menu gıbı ıtemler bulunur.
           leading: Text("Sol Bar"),
           // Barımızın sağ kısmında ayrılmış kısım burada ise genelde action itemler bulunur dokunma anındaki eventler
-
           actions: <Widget>[Text("Sağ Bar ")],
         ),
         // Sayfamızın en altındaki bar olarak footer alanı da diyebilirsiniz
@@ -31,8 +31,10 @@ class MyApp extends StatelessWidget {
           items: [BottomNavigationBarItem(icon: Icon(Icons.ac_unit))],
         ),
 
-        // Sayfamızın ana
+        // Sayfamızın ana alanıdır burada sayfamızdaki tüm içerik dizaynını gerçekleştiririz.
         body: Center(
+          // Container dediğimiz en basit layout componentimiz burada bize sağladığı yükseklik genişlik gibi değerler ile
+          // Tasarımımızı yaparız
           child: Container(
             child: Text('Hello World'),
           ),
