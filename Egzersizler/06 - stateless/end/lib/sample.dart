@@ -97,3 +97,21 @@ class CustomButton extends StatelessWidget {
   }
 }
 
+class CustomCard extends StatelessWidget {
+  final Color color;
+  final Widget child;
+
+  const CustomCard({Key key, this.color, this.child})
+      : assert(child != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 0,
+      shape: StadiumBorder(),
+      color: this.color,
+      child: this.child,
+    );
+  }
+}
