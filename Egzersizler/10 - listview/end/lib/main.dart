@@ -44,7 +44,6 @@ Widget get _listViewCardContainer {
     shrinkWrap: true,
     itemCount: 5,
     itemBuilder: (context, index) => Container(
-      height: 100,
       child: Card(
         child: Text("$index "),
       ),
