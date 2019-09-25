@@ -1,9 +1,19 @@
 import 'package:end/login.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'basket.dart';
 import 'catalog.dart';
+import 'model/cart_model.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      builder: (context) => CartModel(),
+      child: MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -13,7 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => LoginView(),
         "/home": (context) => CatalogView(),
-        "/detail": (context) => LoginView()
+        "/basket": (context) => BasketView()
       },
     );
   }
