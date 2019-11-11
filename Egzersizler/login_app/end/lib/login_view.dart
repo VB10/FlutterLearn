@@ -63,6 +63,7 @@ class _LoginViewState extends State<LoginView> {
             SizedBox(
               height: 30,
             ),
+            
             Expanded(child: TextField()),
             Expanded(
                 child: Align(
